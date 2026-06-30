@@ -1,10 +1,17 @@
 import express from 'express';
 import fetch from 'node-fetch';
+import cors from 'cors'; // 1. Import
 import validator from 'validator';
-
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// 2. Add this middleware before your routes
+app.use(cors({
+  origin: 'https://gcct-fundraiser.onrender.com', // Replace with your actual frontend URL
+  methods: ['POST', 'GET'],
+  credentials: true
+}));
 
 app.use(express.json());
 
