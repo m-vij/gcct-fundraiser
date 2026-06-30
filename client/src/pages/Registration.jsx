@@ -75,7 +75,7 @@ function Registration() {
     
     setLoading(true);
     try {
-      const response = await fetch('/api/submit-manual', {
+      const response = await fetch('https://gcct-fundraiser.onrender.com/api/submit-manual', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ payer: payerInfo, competitors, totalAmount: calculatedTotal })
@@ -96,7 +96,7 @@ function Registration() {
   const handlePayPalSuccessLogs = async (orderId) => {
     setLoading(true); // Lock form while updating database backend via PayPal pipeline
     try {
-      await fetch('/api/submit-paypal', {
+      await fetch('https://gcct-fundraiser.onrender.com/api/submit-paypal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ payer: payerInfo, competitors, totalAmount: calculatedTotal, paypalOrderId: orderId })

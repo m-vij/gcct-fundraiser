@@ -394,3 +394,25 @@
   .scrollable-info-pane { width: 100%; height: auto; padding: 40px 24px; }
   .photo-side { width: 100%; min-height: 350px; }
 }
+
+/* Stack panes on mobile */
+@media (max-width: 1024px) {
+  .split-home-container {
+    flex-direction: column; /* Stacks text and photo vertically */
+    overflow-y: auto;       /* Allows the entire page to scroll */
+    height: 100%;           /* Ensures the container fills the screen height */
+  }
+
+  .scrollable-info-pane {
+    width: 100%;            /* Text pane takes full width[cite: 21] */
+    height: auto;           /* Removes fixed height constraint to allow flow[cite: 21] */
+    padding: 20px;
+    overflow-y: visible;    /* Prevents double-scrollbars[cite: 21] */
+  }
+
+  .photo-side {
+    width: 100%;            /* Photo pane takes full width[cite: 21] */
+    height: 300px;          /* Restricts photo height on mobile[cite: 21] */
+    order: -1;              /* Optional: keeps photo at the top[cite: 21] */
+  }
+}

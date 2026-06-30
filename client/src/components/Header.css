@@ -136,14 +136,55 @@
   letter-spacing: 0.5px;
 }
 
+/* Mobile Overrides */
 @media (max-width: 768px) {
-  .sidebar-nav {
-    width: 100%;
-    height: auto;
+  .hamburger-btn {
+    display: block;
     position: fixed;
-    bottom: 0;
-    flex-direction: row;
-    padding: 16px;
+    top: 15px;
+    left: 15px;
+    z-index: 1002;
+    background: #eab308;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .sidebar-nav {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    z-index: 1001;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar-nav.open {
+    left: 0;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
   }
 }
+
+/* Desktop Defaults */
+@media (min-width: 769px) {
+  .hamburger-btn {
+    display: none;
+  }
+  .sidebar-nav {
+    position: relative;
+    left: 0;
+  }
+}
+
