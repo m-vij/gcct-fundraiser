@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 5000;
 
 // 2. Add this middleware before your routes
 app.use(cors({
-  origin: 'https://gcct-fundraiser.onrender.com', // Replace with your actual frontend URL
-  methods: ['POST', 'GET'],
+  origin: ['https://gcct-fundraiser.onrender.com', 'https://gcctfundraiser.org'], // Add your custom domain here
+  methods: ['POST', 'GET', 'OPTIONS'],
   credentials: true
 }));
 
