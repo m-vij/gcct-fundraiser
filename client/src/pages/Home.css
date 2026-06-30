@@ -1,0 +1,396 @@
+.split-home-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #0b0f19;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.scrollable-info-pane {
+  width: 50%;
+  height: 100%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 5;
+  background-color: #0b0f19;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #eab308;
+  margin-bottom: 24px;
+}
+
+.pulse-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: #eab308;
+  border-radius: 50%;
+  animation: pulse-ring 2s infinite;
+}
+
+.main-headline {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.accent-text {
+  background: linear-gradient(135deg, #fef08a, #eab308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub-headline-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 32px;
+  max-width: 540px;
+}
+
+/* Action Button Layout */
+.action-button-group {
+  margin-bottom: 36px;
+}
+
+.btn-register-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #eab308, #ca8a04);
+  color: #0b0f19;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 10px 25px rgba(234, 179, 8, 0.25);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-register-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(234, 179, 8, 0.4);
+}
+
+.btn-register-action:hover svg {
+  transform: translateX(4px);
+}
+
+/* --- Countdown Timer Layout --- */
+.countdown-grid-wrapper {
+  margin-bottom: 36px;
+  width: 100%;
+  max-width: 540px;
+}
+
+.countdown-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.countdown-section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #64748b;
+}
+
+.countdown-event-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.countdown-row {
+  display: flex;
+  gap: 12px;
+}
+
+.time-tile {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 14px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 70px;
+  text-align: center;
+}
+
+.time-tile.highlight-seconds {
+  border-color: rgba(234, 179, 8, 0.2);
+  background: rgba(234, 179, 8, 0.01);
+}
+
+.time-tile.highlight-seconds .time-val {
+  color: #fef08a;
+}
+
+.time-val {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.time-lbl {
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- INTERACTIVE MODULE 2: Impact Selector Tiers --- */
+.interactive-impact-container {
+  width: 100%;
+  max-width: 540px;
+  margin-bottom: 40px;
+}
+
+.impact-section-title {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.tier-toggle-bar {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 16px;
+}
+
+.tier-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.tier-btn:hover {
+  color: #ffffff;
+}
+
+.tier-btn.active {
+  color: #0b0f19;
+  background-color: #eab308;
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.15);
+}
+
+.tier-display-card {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 120px;
+}
+
+.tier-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.tier-description {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* --- INTERACTIVE MODULE 3: Interactive Sponsor Grid --- */
+.partners-section {
+  width: 100%;
+  max-width: 540px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 32px;
+}
+
+.partners-title {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.partners-interactive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.partner-logo-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 12px 8px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: help;
+  transition: all 0.2s ease;
+}
+
+.partner-logo-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.partner-image-frame {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.partner-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.9) opacity(0.7);
+  transition: filter 0.25s ease;
+}
+
+.partner-logo-card:hover .partner-logo-img {
+  filter: grayscale(0) brightness(1) opacity(1);
+}
+
+.partner-fallback-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.partner-logo-card:hover .partner-fallback-text {
+  color: #cbd5e1;
+}
+
+/* Dynamic CSS Hover Tooltip */
+.partner-hover-tooltip {
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  width: 180px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+}
+
+.partner-logo-card:hover .partner-hover-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- Right Immersive Photo Window --- */
+.photo-side {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-zoom-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.interactive-hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.photo-side:hover .interactive-hero-photo {
+  transform: scale(1.05);
+}
+
+.photo-floating-tag {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(11, 15, 25, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.tag-location {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(234, 179, 8, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
+}
+
+@media (max-width: 1024px) {
+  .split-home-container { flex-direction: column; }
+  .scrollable-info-pane { width: 100%; height: auto; padding: 40px 24px; }
+  .photo-side { width: 100%; min-height: 350px; }
+}

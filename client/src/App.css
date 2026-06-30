@@ -1,0 +1,27 @@
+/* Reset standard margins and paddings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents global double scrollbars */
+}
+
+/* The wrapper directly inside <Router> */
+.app-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* The area where <Routes> render */
+.main-content {
+  flex: 1;              /* Takes up all remaining horizontal space */
+  height: 100%;
+  overflow-y: auto;     /* Allows individual sub-pages to scroll independently */
+  position: relative;
+}
