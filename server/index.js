@@ -88,7 +88,7 @@ process.on('unhandledRejection', (reason) => {
   console.error('UNHANDLED PROMISE REJECTION:', reason);
 });
 
-app.listen(PORT, '127.0.0.1', () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n==================================================`);
   console.log(`GCCT Backend operating cleanly on http://127.0.0.1:${PORT}`);
   console.log(`KEEP THIS TERMINAL OPEN! Server is listening...`);
