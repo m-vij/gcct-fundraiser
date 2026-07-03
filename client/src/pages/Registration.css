@@ -197,22 +197,24 @@
 /* Control Elements */
 .btn-add {
   width: 100%;
-  background: transparent;
-  border: 1px dashed rgba(255, 255, 255, 0.15);
-  color: #cbd5e1;
+  /* Changed from transparent to a very subtle gold tint */
+  background: rgba(234, 179, 8, 0.05); 
+  border: 1px dashed #eab308; /* Solid gold border instead of white */
+  color: #fbbf24;            /* Brighter gold text */
   border-radius: 8px;
   padding: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.95rem;        /* Slightly larger for better readability */
+  font-weight: 700;          /* Bolder */
   cursor: pointer;
   transition: all 0.2s ease;
   margin-bottom: 12px;
 }
 
 .btn-add:hover {
+  background: #eab308;       /* Full gold background on hover */
+  color: #0f172a;            /* Dark text for high contrast on gold */
+  border-style: solid;       /* Solid border looks better with solid background */
   border-color: #eab308;
-  color: #eab308;
-  background: rgba(234, 179, 8, 0.03);
 }
 
 .btn-delete {
