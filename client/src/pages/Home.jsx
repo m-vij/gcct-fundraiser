@@ -52,7 +52,7 @@ function Home() {
         </h1>
 
         <p className="sub-headline-text">
-          Join the battle against epilepsy on the chess board. Connect with players across the region, showcase your strategy, and make a profound community impact.
+          Join the battle for a healthier future on the chessboard. Connect with players across the region, showcase your strategy, and make a profound community impact.
         </p>
 
         {/* Primary Action Button */}
@@ -114,13 +114,13 @@ function Home() {
             {activeTier === 'entry' && (
               <>
                 <h4 className="tier-title">Tournament Registration</h4>
-                <p className="tier-description">Secures your formal bracket placement and tournament profile. All money raised from registrations goes directly to Cincinnati Children's to support patient care and medical resources.</p>
+                <p className="tier-description">Secures your formal bracket placement and tournament profile. All money raised from registrations goes directly to Cincinnati Children's Center for Better Health and Nutrition.</p>
               </>
             )}
             {activeTier === 'donation' && (
               <>
                 <h4 className="tier-title">Direct Support Contribution</h4>
-                <p className="tier-description">Every dollar from extra donations helps fund crucial epilepsy research pipelines, medical diagnostics equipment, and direct financial assistance grants for local families navigating critical healthcare hurdles.</p>
+                <p className="tier-description">Every dollar from extra donations supports the Center for Better Health and Nutrition at Cincinnati Children’s, helping fund family-based obesity prevention programs, metabolic health research, and resources that empower children and teens to achieve healthy, sustainable lifestyle changes.</p>
               </>
             )}
           </div>

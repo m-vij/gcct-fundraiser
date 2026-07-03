@@ -163,10 +163,10 @@ function Registration() {
         <div className="reg-split-layout">
           
           <div className="reg-info-pane">
-            <span className="meta-badge">6th Annual GCCT</span>
+            <span className="meta-badge">7th Annual GCCT</span>
             <h1 className="meta-title">Tournament <span className="accent-text">Registration</span></h1>
             <p className="meta-description">
-              Please complete the registration form below to secure your spot in the event; the entrance fee is $10 per person, and the final registration deadline is August 9th at midnight. The form has options to choose your preferred checkout method: you can select the automated gateway to pay using PayPal or a Credit Card, or choose the manual route to transfer your entry funds via Venmo or Zelle. Upon successful submission, a confirmation message will automatically be sent to the email address you provided. If you do not receive this confirmation email within 24 hours, please reach out directly to our support team at sakshumvij09@gmail.com for manual verification.
+              Please complete the registration form below to secure your spot in the event; the entrance fee is $10 per person, and the final registration deadline is August 9th at midnight. The form has options to choose your preferred checkout method: you can select the automated gateway to pay using PayPal or a Credit Card, or choose the manual route to transfer your entry funds via Venmo or Zelle. Upon successful submission, a confirmation message will automatically be sent to the email address you provided. If you do not receive this confirmation email within 24 hours, please reach out directly to our support team at gcctfundraiser@gmail.com for manual verification.
             </p>
 
             <div className="summary-cards-container">

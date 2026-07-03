@@ -131,14 +131,19 @@ function About() {
             <span className="motivation-small-tag">This Year's Cause</span>
             <h3 className="motivation-title">Supporting Cincinnati Children’s Hospital</h3>
             <p className="motivation-desc">
-              All money raised from this year's event will be donated directly to the <strong>Cincinnati Children's Epilepsy Surgery Family Assistance Fund</strong>. 
+              All money raised from this year's event will be donated directly to the <strong>Cincinnati Children's Center for Better Health and Nutrition</strong>. 
             </p>
             <p className="motivation-desc">
-              This vital resource provides essential travel, housing, and meal assistance for families whose children are undergoing life-changing neurosurgery.
-            </p>
-            <p className="motivation-desc">
-              For many, the journey to epilepsy surgery is long, emotionally exhausting, and financially overwhelming. Families often travel great distances for specialized care, adding heavy financial burden during an already difficult period. This fund steps in to ensure no family has to choose between treatment and baseline comfort.
-            </p>
+  This fund provides essential resources for families participating in specialized metabolic health programs, 
+  helping to remove barriers to care such as travel, nutritional support, and access to educational materials 
+  during their journey toward better health.
+</p>
+<p className="motivation-desc">
+  For many families, the path to sustainable wellness is demanding and complex. Navigating appointments, 
+  specialized dietary needs, and consistent lifestyle support can be financially overwhelming. 
+  This fund steps in to ensure that every child—regardless of their family's financial situation—has 
+  the resources they need to focus entirely on their health and long-term success.
+</p>
             
             <div className="quote-block">
               <p>"At GCCT, we believe in making bold moves — for progress, for equity, and for hope. Every game played and every donation made directly helps families find stability when they need it most."</p>
@@ -150,12 +155,12 @@ function About() {
           <div className="acknowledgement-photo-side">
             <div className="document-frame">
               <img 
-                src="" 
+                src="/gcct-acknowledgement.png" 
                 alt="Letter of Acknowledgement" 
                 className="letter-img-asset"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
-              
+              {/*
               <div className="document-placeholder-ui">
                 <div className="placeholder-icon">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -172,6 +177,7 @@ function About() {
                 </p>
                 <div className="pending-badge">Pending Document Arrival</div>
               </div>
+	      */}
 
             </div>
           </div>

@@ -24,7 +24,7 @@ function Donate() {
             
             <div style={{ marginTop: '40px', textAlign: 'center' }}>
               <a 
-                href="https://giving.cincinnatichildrens.org/fundraiser/6451803" 
+                href="https://giving.cincinnatichildrens.org/fundraiser/7378986" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn-primary" 
