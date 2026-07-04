@@ -67,17 +67,21 @@ function Registration() {
     setSubmitted(false);
   };
 
-  // API CHANGE ONLY: Relative Path
   const handleManualSubmit = async (e) => {
     if (e && e.preventDefault) e.preventDefault();
-    if (!emailAcknowledged) return;
+    if (!emailAcknowledged || !isFormValid()) return;
     
     setLoading(true);
     try {
       const response = await fetch('https://gcct-fundraiser.onrender.com/api/submit-manual', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ payer: payerInfo, competitors, totalAmount: calculatedTotal })
+        body: JSON.stringify({ 
+          payer: payerInfo, 
+          competitors, 
+          totalAmount: calculatedTotal,
+          transactionId: payerInfo.transactionId 
+        })
       });
       if (response.ok) {
         setSubmitted(true);
@@ -91,7 +95,6 @@ function Registration() {
     }
   };
 
-  // API CHANGE ONLY: Relative Path
   const handlePayPalSuccessLogs = async (orderId) => {
     setLoading(true);
     try {
@@ -110,6 +113,7 @@ function Registration() {
   };
 
   const isFormValid = () => {
+    const isManualValid = paymentMethod !== 'venmo_zelle' || (payerInfo.transactionId && payerInfo.transactionId.trim() !== "");
     return (
       payerInfo.payerFirstName &&
       payerInfo.payerLastName &&
@@ -117,6 +121,7 @@ function Registration() {
       payerInfo.payerPhone &&
       payerInfo.referralSource &&
       emailAcknowledged &&
+      isManualValid &&
       competitors.every(c => c.firstName && c.lastName && c.chessUsername && c.rapidRating)
     );
   };
@@ -166,7 +171,7 @@ function Registration() {
             <span className="meta-badge">7th Annual GCCT</span>
             <h1 className="meta-title">Tournament <span className="accent-text">Registration</span></h1>
             <p className="meta-description">
-              Please complete the registration form below to secure your spot in the event; the entrance fee is $10 per person, and the final registration deadline is August 9th at midnight. The form has options to choose your preferred checkout method: you can select the automated gateway to pay using PayPal or a Credit Card, or choose the manual route to transfer your entry funds via Venmo or Zelle. Upon successful submission, a confirmation message will automatically be sent to the email address you provided. If you do not receive this confirmation email within 24 hours, please reach out directly to our support team at gcctfundraiser@gmail.com for manual verification.
+              Please complete the registration form below to secure your spot in the event; the entrance fee is $10 per person, and the final registration deadline is August 9th at midnight. Upon successful submission, a confirmation message will automatically be sent to the email address you provided. If you do not receive this confirmation email within 24 hours, please reach out directly to our support team at gcctfundraiser@gmail.com for manual verification.
             </p>
 
             <div className="summary-cards-container">
@@ -305,8 +310,8 @@ function Registration() {
                         }]
                       });
                     }}
-		    onCancel={() => setLoading(false)}
-  	            onError={() => setLoading(false)}
+                    onCancel={() => setLoading(false)}
+                    onError={() => setLoading(false)}
                     onApprove={async (data, actions) => {
                       const order = await actions.order.capture();
                       handlePayPalSuccessLogs(order.id);
