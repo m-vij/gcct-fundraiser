@@ -127,55 +127,46 @@ function Home() {
         </div>
 
         {/* INTERACTIVE MODULE 3: Image-Ready Sponsor / Partner Grid */}
-        <div className="partners-section">
-          <span className="partners-title">Supported By Regional Partners</span>
-          <div className="partners-interactive-grid">
-            
-            {/* Sponsor 1 */}
-            <div className="partner-logo-card">
-              <div className="partner-image-frame">
-                <img 
-                  src="" 
-                  alt="Cincy Chess Club" 
-                  className="partner-logo-img"
-                  onError={(e) => { e.target.style.display = 'none'; }} 
-                />
-                <span className="partner-fallback-text">Cincy Chess Club</span>
-              </div>
-              <div className="partner-hover-tooltip">Providing professional tournament boards & clocks.</div>
-            </div>
+        
+<div className="partners-section">
+  <span className="partners-title">Supported By Regional Partners</span>
+  <div className="partners-interactive-grid">
 
-            {/* Sponsor 2 */}
-            <div className="partner-logo-card">
-              <div className="partner-image-frame">
-                <img 
-                  src="" 
-                  alt="Queen City Health" 
-                  className="partner-logo-img"
-                  onError={(e) => { e.target.style.display = 'none'; }}
-                />
-                <span className="partner-fallback-text">Queen City Health</span>
-              </div>
-              <div className="partner-hover-tooltip">Our medical safety partner sponsoring medical research.</div>
-            </div>
-
-            {/* Sponsor 3 */}
-            <div className="partner-logo-card">
-              <div className="partner-image-frame">
-                <img 
-                  src="" 
-                  alt="Tri-State Logistics" 
-                  className="partner-logo-img"
-                  onError={(e) => { e.target.style.display = 'none'; }}
-                />
-                <span className="partner-fallback-text">Tri-State Logistics</span>
-              </div>
-              <div className="partner-hover-tooltip">Covering all logistical expenses for our event venue.</div>
-            </div>
-
-          </div>
+    {/* Toggle Sponsor 1: Change 'true' to 'false' to hide */}
+    {false && (
+      <div className="partner-logo-card">
+        <div className="partner-image-frame">
+          <img src="" alt="Cincy Chess Club" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text">Cincy Chess Club</span>
         </div>
+        <div className="partner-hover-tooltip">Providing professional tournament boards & clocks.</div>
+      </div>
+    )}
 
+    {/* Toggle Sponsor 2: Change 'true' to 'false' to hide */}
+    {false && (
+      <div className="partner-logo-card">
+        <div className="partner-image-frame">
+          <img src="" alt="Queen City Health" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text">Queen City Health</span>
+        </div>
+        <div className="partner-hover-tooltip">Our medical safety partner sponsoring medical research.</div>
+      </div>
+    )}
+
+    {/* Toggle Sponsor 3: Change 'true' to 'false' to hide */}
+    {false && (
+      <div className="partner-logo-card">
+        <div className="partner-image-frame">
+          <img src="" alt="Tri-State Logistics" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text">Tri-State Logistics</span>
+        </div>
+        <div className="partner-hover-tooltip">Covering all logistical expenses for our event venue.</div>
+      </div>
+    )}
+
+  </div>
+</div>
       </div>
 
       {/* RIGHT COLUMN: Interactive Immersive Photo Window */}

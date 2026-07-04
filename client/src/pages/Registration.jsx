@@ -305,6 +305,8 @@ function Registration() {
                         }]
                       });
                     }}
+		    onCancel={() => setLoading(false)}
+  	            onError={() => setLoading(false)}
                     onApprove={async (data, actions) => {
                       const order = await actions.order.capture();
                       handlePayPalSuccessLogs(order.id);
@@ -315,8 +317,8 @@ function Registration() {
                 <div className="info-box gold-box">
                   <p>Please send exactly <strong>${calculatedTotal}.00 USD</strong> to our verified accounts:</p>
                   <ul>
-                    <li><strong>Venmo:</strong> @GCCT-Fundraiser</li>
-                    <li><strong>Zelle:</strong> finance@gcctfundraiser.org</li>
+                    <li><strong>Venmo:</strong> @Brinder-Vij</li>
+                    <li><strong>Zelle:</strong> 917-403-6210</li>
                   </ul>
                   <div className="form-group" style={{ marginTop: '16px' }}>
                     <label>Venmo Username or Zelle Phone Number/Email *</label>

@@ -18,8 +18,8 @@ app.use(express.json());
 // ==========================================
 // TWO SEPARATE GOOGLE SCRIPT MACRO ENDPOINTS
 // ==========================================
-const GOOGLE_SCRIPT_URL_PAYPAL = "https://script.google.com/macros/s/AKfycbxeOWk-c9DO6H9SMMp9AVgolB7Hw3lU7yzuFoMzRjV3M6qqyP2IqeaMrM4SVo5w9ggWBg/exec"; 
-const GOOGLE_SCRIPT_URL_MANUAL = "https://script.google.com/macros/s/AKfycbzVR3JWUwaoqp4qWJtacy83oIRDMteTMPxlxhEZN75eiQucleqBT9RmFR143YXfJ2oG/exec"; 
+const GOOGLE_SCRIPT_URL_PAYPAL = "https://script.google.com/macros/s/AKfycbyJ2K6GsapErRV4yCxh_6jlWNluSCdKZShX-d_cWGiM29bJQFj0C05KQnUWI0xQRISVFQ/exec"; 
+const GOOGLE_SCRIPT_URL_MANUAL = "https://script.google.com/macros/s/AKfycbwxNytZW7Y0AhoRuP3cIYxTob7zPv83l3GDJQ5zpWyNcaSTtLMrJ3OrZCq8_LA7DDBa/exec"; 
 
 // ==========================================
 // ROUTE 1: AUTOMATED PAYPAL BATCH ROUTE

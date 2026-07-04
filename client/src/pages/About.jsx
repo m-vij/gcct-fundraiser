@@ -115,10 +115,29 @@ function About() {
               </div>
             </div>
 
-            <div className="rewards-callout">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#eab308" strokeWidth="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-              <span>The top three players of each section will receive an official placement medal depending upon their final ranking.</span>
-            </div>
+            <div className="rewards-callout" style={{ textAlign: 'center', marginTop: '20px' }}>
+  		<img 
+    		src="/medal.jpg" 
+ 		   alt="Tournament Medal" 
+   		   style={{ 
+    		   width: '120px', 
+      		   height: '120px', 
+      		   borderRadius: '12px', 
+      		   objectFit: 'cover', 
+      		   marginBottom: '15px',
+                   border: '2px solid #eab308'
+    		}} 
+  		/>
+  		<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+    		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#eab308" strokeWidth="2">
+      			<circle cx="12" cy="8" r="7"></circle>
+      			<polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+    		</svg>
+    		<span style={{ fontWeight: '600' }}>
+      			The top three players of each section will receive an official placement medal depending upon their final ranking.
+    		</span>
+  		</div>
+	    </div>
           </div>
 
         </div>

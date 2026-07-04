@@ -13,7 +13,7 @@ function Header({ isMenuOpen, setIsMenuOpen }) {
 
       <aside className={`sidebar-nav ${isMenuOpen ? 'open' : ''}`}>
         <div className="brand-container">
-          <div className="logo-icon">GC</div>
+          <div className="logo-icon">7th</div>
           <div className="brand-details">
             <span className="brand-name">GCCT</span>
             <span className="brand-sub">Fundraiser</span>
