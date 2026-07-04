@@ -315,11 +315,10 @@ function Registration() {
                 </div>
               ) : (
                 <div className="info-box gold-box">
-                  <p>Please send exactly <strong>${calculatedTotal}.00 USD</strong> to our verified accounts:</p>
-                  <ul>
-                    <li><strong>Venmo:</strong> @Brinder-Vij</li>
-                    <li><strong>Zelle:</strong> 917-403-6210</li>
-                  </ul>
+                  <p>
+                   Please prepare to send exactly <strong>${calculatedTotal}.00 USD</strong>. 
+                   Once you submit this form, you will receive an email shortly with detailed instructions and our payment handles to complete your registration.
+                  </p>
                   <div className="form-group" style={{ marginTop: '16px' }}>
                     <label>Venmo Username or Zelle Phone Number/Email *</label>
                     <input type="text" name="transactionId" value={payerInfo.transactionId} onChange={handlePayerChange} required placeholder="For manual validation crosscheck" disabled={loading} />
