@@ -57,7 +57,7 @@ app.post('/api/submit-paypal', async (req, res) => {
 // ==========================================
 app.post('/api/submit-manual', async (req, res) => {
   try {
-    const { payer, competitors, totalAmount } = req.body;
+    const { payer, competitors, totalAmount, transactionId} = req.body;
 
     if (!payer?.payerEmail || !validator.isEmail(payer.payerEmail)) {
       return res.status(400).json({ error: "Invalid primary payer email address." });
@@ -71,7 +71,7 @@ app.post('/api/submit-manual', async (req, res) => {
         payer,
         competitors,
         totalAmount,
-        transactionId: payer.transactionId,
+        transactionId: transactionId,
         status: 'PENDING_ADMIN_CHECK'
       })
     });
