@@ -63,7 +63,7 @@ function Registration() {
             id="jotform-embed"
             title="Registration Checkout Portal"
             /* MAKE SURE THIS IS THE LIVE LINK FROM THE 'PUBLISH' TAB, NOT THE BUILDER LINK */
-            src="https://form.jotform.com/241658517211151" 
+            src="https://form.jotform.com/261848556127163" 
             style={{
               width: '100%',
               height: '1000px', /* Generous height so the fields don't feel squished */
