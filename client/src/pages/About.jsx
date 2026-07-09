@@ -70,10 +70,10 @@ function About() {
 
               <div className="legacy-text-block">
                 <p className="details-paragraph">
-                  The Greater Cincinnati Chess Tournament (GCCT) enters its <strong>6th year!</strong> Founded in 2019 during the COVID-19 pandemic, GCCT began as a way to stay connected through chess while supporting vital medical causes.
+                  The Greater Cincinnati Chess Tournament (GCCT) enters its <strong>7th year!</strong> Founded in 2019 during the COVID-19 pandemic, GCCT began as a way to stay connected through chess while supporting vital medical causes.
                 </p>
                 <p className="details-paragraph">
-                  What started as a small virtual tournament has grown into an annual community-driven event, raising <strong>over $5,000</strong> for critical healthcare initiatives, including COVID-19 research, pediatric nutrition, cancer research, and children’s mental and behavioral health.
+                  What started as a small virtual tournament has grown into an annual community-driven event, raising <strong>over $6,000</strong> for critical healthcare initiatives, including COVID-19 research, pediatric nutrition, cancer research, and children’s mental and behavioral health.
                 </p>
                 <p className="details-paragraph">
                   Hosted online, GCCT brings together players of all skill levels for a day of spirited competition and purposeful giving. With support from local hospitals, chess clubs, and passionate volunteers, the tournament has engaged over 300 players across the country.

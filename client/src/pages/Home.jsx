@@ -133,13 +133,14 @@ function Home() {
   <div className="partners-interactive-grid">
 
     {/* Toggle Sponsor 1: Change 'true' to 'false' to hide */}
-    {false && (
+    {true && (
       <div className="partner-logo-card">
         <div className="partner-image-frame">
-          <img src="" alt="Cincy Chess Club" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
-          <span className="partner-fallback-text">Cincy Chess Club</span>
+          <img src="/cchmc-sponsor.jpg" alt="Cincinnati Children's" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text"></span>
+	  <div className="partner-hover-tooltip">Cincinnati Children's Hospital</div>
         </div>
-        <div className="partner-hover-tooltip">Providing professional tournament boards & clocks.</div>
+        
       </div>
     )}
 
