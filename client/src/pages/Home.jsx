@@ -129,7 +129,7 @@ function Home() {
         {/* INTERACTIVE MODULE 3: Image-Ready Sponsor / Partner Grid */}
         
 <div className="partners-section">
-  <span className="partners-title">Supported By Regional Partners</span>
+  <span className="partners-title">Special Thanks to our Supporting Partner Organizations</span>
   <div className="partners-interactive-grid">
 
     {/* Toggle Sponsor 1: Change 'true' to 'false' to hide */}
@@ -145,24 +145,24 @@ function Home() {
     )}
 
     {/* Toggle Sponsor 2: Change 'true' to 'false' to hide */}
-    {false && (
+    {true && (
       <div className="partner-logo-card">
         <div className="partner-image-frame">
-          <img src="" alt="Queen City Health" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
-          <span className="partner-fallback-text">Queen City Health</span>
+          <img src="/csc.png" alt="Cincinnati Scholastic Chess" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text"></span>
         </div>
-        <div className="partner-hover-tooltip">Our medical safety partner sponsoring medical research.</div>
+        <div className="partner-hover-tooltip">Cincinnati Scholastic Chess</div>
       </div>
     )}
 
     {/* Toggle Sponsor 3: Change 'true' to 'false' to hide */}
-    {false && (
+    {true && (
       <div className="partner-logo-card">
         <div className="partner-image-frame">
-          <img src="" alt="Tri-State Logistics" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
-          <span className="partner-fallback-text">Tri-State Logistics</span>
+          <img src="/rk.png" alt="RK Chess Gurukul" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text"></span>
         </div>
-        <div className="partner-hover-tooltip">Covering all logistical expenses for our event venue.</div>
+        <div className="partner-hover-tooltip">RK Chess Gurukul</div>
       </div>
     )}
 
