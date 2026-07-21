@@ -166,6 +166,17 @@ function Home() {
       </div>
     )}
 
+    {/* Toggle Sponsor 4: Change 'true' to 'false' to hide */}
+    {true && (
+      <div className="partner-logo-card">
+        <div className="partner-image-frame">
+          <img src="/ccc.jpg" alt="Cincinnati Chess Club" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text"></span>
+        </div>
+        <div className="partner-hover-tooltip">Cincinnati Chess Club</div>
+      </div>
+    )}
+
   </div>
 </div>
       </div>
