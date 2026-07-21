@@ -177,6 +177,17 @@ function Home() {
       </div>
     )}
 
+    {/* Toggle Sponsor 5: Change 'true' to 'false' to hide */}
+    {true && (
+      <div className="partner-logo-card">
+        <div className="partner-image-frame">
+          <img src="/mechanics.png" alt="Mechanics Institute" className="partner-logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <span className="partner-fallback-text"></span>
+        </div>
+        <div className="partner-hover-tooltip">Mechanics Institute</div>
+      </div>
+    )}
+
   </div>
 </div>
       </div>
